@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.tallybook">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.OpenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.MainActivity"/>
+        <activity android:name=".activity.LoginActivity"/>
+        <activity android:name=".activity.RegisterActivity"/>
+        <activity android:name=".activity.AddActivity"/>
+        <activity android:name=".activity.MyActivity"/>
+        <activity android:name=".activity.PasswordActivity"/>
+        <activity android:name=".activity.PersonActivity"/>
+        <activity android:name=".activity.AboutActivity"/>
+        <receiver
+            android:name=".util.ForceOfflineReceiver"
+            android:exported="true"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="com.example.tallybook.FORCE_OFFLINE"></action>
+            </intent-filter>
+        </receiver>
+    </application>
+
+
+</manifest>
